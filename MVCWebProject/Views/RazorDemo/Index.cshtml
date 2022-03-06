@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{
+    string[] cities = { "Patna", "Gaya", "Delhi" };
+}
+
+<ul>
+    @foreach (var item in cities)
+    {
+        <li>@item</li>
+    }
+</ul>
