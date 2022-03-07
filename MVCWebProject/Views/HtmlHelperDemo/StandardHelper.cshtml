@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "StandardHelper";
+}
+
+<div class="container container-fluid">
+    <div class="jumbotron">
+        <h2>StandardHelper</h2>
+
+        @using (Html.BeginForm("StandardHelper", "HtmlHelperDemo"))
+        {
+            <label>ID: </label> @Html.TextBox("id")
+            <br />
+            <br />
+
+            <label>FullName: </label> @Html.TextBox("fullname")
+            <br />
+            <br />
+
+            <label>Gender: </label>
+            @Html.RadioButton("gender", "Male")<label>Male</label>
+            @Html.RadioButton("gender", "Female")<label>Female</label>
+            @Html.RadioButton("gender", "Others")<label>Others</label>
+            <br />
+            <br />
+
+            <label>Qualification: </label>
+            @Html.DropDownList("qualification", new SelectList(ViewBag.Qualification), "Select Qualification")
+            <br />
+            <br />
+
+            <label>City: </label>
+            @Html.DropDownList("City", "Select City")
+            <br />
+            <br />
+
+            <input type="submit" value="Register" />
+        }
+    </div>
+</div>
